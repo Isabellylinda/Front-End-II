@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+    <h1>Meu titulo <span>completo</span></h1>
+    <script src="script.js"></script>
+</body>
+</html>
+
+a.textContent = item.texto.toUpperCase(); // Texto em caixa alta
+a.href = item.url;
+
+// Remove sublinhado e aplica cor branca
+a.style.textDecoration = 'none';
+a.style.color = 'white';
+
+// Adiciona o link ao elemento de lista
+li.appendChild(a);
+
+// Adiciona o elemento de lista à lista de navegação
+listaNavegacao.appendChild(li);
+});
+}
