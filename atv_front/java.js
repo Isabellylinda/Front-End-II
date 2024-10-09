@@ -6,26 +6,38 @@ const itensMenu = [
 
 function criarMenu() {
     const header = document.createElement('header');
-    const nav = document.createElement('nav');
-    const ul = document.createElement('ul');
+    const nav = document.createElement('nav'); 
+    const ul = document.createElement('ul'); 
 
-    nav.appendChild(ul);
-    header.appendChild(nav);
-    document.body.prepend(header);
+    ul.style.display = 'flex';
+    ul.style.justifyContent = 'center';
+    ul.style.alignItems = 'center'; 
+    ul.style.gap = '20px';
+    ul.style.listStyleType = 'none'; 
+    ul.style.height = '40px';
 
-    adicionarItensMenu(ul);
-}
-
-function adicionarItensMenu(lista) {
     itensMenu.forEach(item => {
         const li = document.createElement('li');
         const a = document.createElement('a');
-        a.textContent = item.nome;
-        a.href = item.url;
+        a.href = item.url; 
+        a.textContent = item.nome.toUpperCase(); 
+        a.style.color = 'white'; 
+        a.style.textDecoration = 'none'; 
 
         li.appendChild(a);
-        lista.appendChild(li);
+        ul.appendChild(li); 
     });
+
+    nav.appendChild(ul);
+    header.appendChild(nav); 
+    document.body.prepend(header); 
 }
 
-criarMenu();
+function estilizarMenu() {
+    const header = document.querySelector('header'); 
+    header.style.backgroundColor = '#071D41'; 
+    header.style.fontFamily = 'Arial, sans-serif';
+}
+
+criarMenu(); 
+estilizarMenu(); 
