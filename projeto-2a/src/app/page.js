@@ -1,16 +1,35 @@
-// import Image from "next/image"
-import styles from "./page.module.css";
-import Image from "next/image";
+'use client'
+import{useState} from "react";
 
-export default function Home() {
-  const nome = 'Isalinda'
-  return (
-    <div >
-      <h1>Página Principal</h1>
-      <p>Parágrafo Pagina Inicial</p>
-       <p>Autor: {nome}</p> 
-       <Image className={styles.imagem} src= "/images/OIP.jpg" alt= "Imagem da hello kity" width={350} height={400} /> 
+export default function State(){
+    const [conteudo, setConteudo] = useState ('Bom dia')
+    const[name, setName] = useState('');
+    const[showDiv, setShowDiv] = useState(true)
 
-    </div>
-  );
+    const controlarParagrafo = () => {
+        setConteudo('Boa tarde!')
+        console.log('conteudo' + conteudo)
+    }
+
+    const controlarInput = (evento) => {
+        console.log(evento.target.value);
+        setName(evento.target.value)
+
+    }
+        return(
+        <div>
+            {/* <p>{conteudo}</p>
+            <button onClick={controlarParagrafo}>mudar</button> */}
+            <button onClick={()=>{setShowDiv(!showDiv) }}>{showDiv ? 'Esconder': 'Mostrar'}</button>
+            {showDiv &&
+            (
+                <div>
+                    <p>Nome: {name}</p>
+                    <input type="text" onChange={controlarInput} />
+                </div>
+            )
+            
+            }   
+        </div>
+    )
 }
