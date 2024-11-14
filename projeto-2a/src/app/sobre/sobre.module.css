@@ -1,7 +1,16 @@
-.paragrafo{
-    background-color: rgb(219, 123, 195);
-}
+/* sobre/sobre.module.css */
 
-#paragrafoUnico{
-    background-color: rgb(189, 68, 169);
-}
+.paragrafo {
+    color: var(--primary-color);
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  #paragrafoUnico {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  

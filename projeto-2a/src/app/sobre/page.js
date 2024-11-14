@@ -1,11 +1,12 @@
-import styles from "./sobre.module.css"
+// sobre/page.js
+import styles from "./sobre.module.css";
 
-export default function sobre() {
-    return(
+export default function Sobre() {
+    return (
         <main>
-            <h1> Sobre</h1>
-            <p className= {styles.paragrafo}> Minha Segunda Pagina</p>
-            <p id= {styles.paragrafoUnico}>Meu parágrafo especial</p>
+            <h1>Sobre</h1>
+            <p className={styles.paragrafo}>Minha Segunda Página</p>
+            <p id={styles.paragrafoUnico}>Meu parágrafo especial</p>
         </main>
-    )
+    );
 }
