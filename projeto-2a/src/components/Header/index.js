@@ -1,27 +1,29 @@
+'use client';
+
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./Header.module.css";
 
-export default function Header() {
-    const [menuOpen, setMenuOpen] = useState(false);
+const Header = () => {
+  const [menuAberto, setMenuAberto] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
+  const toggleMenu = () => {
+    setMenuAberto(!menuAberto);
+  };
 
-    return (
-        <header className={styles.header}>
-            <div className={styles.logo}>Meu Logo</div>
-            <button className={styles.menuButton} onClick={toggleMenu}>
-                {menuOpen ? "✖" : "☰"}
-            </button>
-            <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}>
-                <ul>
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/sobre">Sobre</Link></li>
-                    <li><Link href="/contato">Contato</Link></li>
-                </ul>
-            </nav>
-        </header>
-    );
-}
+  return (
+    <header className={styles.header}>
+      <div className={styles.logo}>Meu Logo</div>
+      <div className={`${styles.menuIcon} ${menuAberto ? styles.open : ''}`} onClick={toggleMenu}>
+        ☰
+      </div>
+      <nav className={`${styles.nav} ${menuAberto ? styles.show : ''}`}>
+        <Link href="/">Home</Link>
+        <Link href="/sobre">Sobre</Link>
+        <Link href="/contato">Contato</Link>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;
