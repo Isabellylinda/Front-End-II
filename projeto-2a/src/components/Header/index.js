@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <Image src="/isa.png" alt="Logo Isa" className={styles.logoImage} width={50} height={50} />
+      <Image src="/images/isa.png" alt="Logo Isa" className={styles.logoImage} width={50} height={50} />
       <div className={styles.menuIcon} onClick={toggleMenu}>
         <span className={isOpen ? styles.menuOpen : ""}></span>
       </div>
