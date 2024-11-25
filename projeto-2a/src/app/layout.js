@@ -1,19 +1,20 @@
+
 import "./globals.css";
-import Header from "@/components/Header";
+import Header from "@/components/header";
 
 export const metadata = {
-  title: "Projeto Isabelly",
-  description: "Portfólio da Isa",
+  title: "Primeira aplicação",
+  description: "Aplicação de front-end II",
   charset: 'UTF-8',
-  author: 'IsaLinda',
-  keywords: 'HTML, CSS, JavaScript, React, Next.js',
+  author: 'Isabelly Lopes',
+  keywords: 'HTML, CSS, JavaScript, React, Next.js'
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body>
-        <Header />
+        <Header/>
         {children}
       </body>
     </html>

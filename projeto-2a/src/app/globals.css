@@ -1,17 +1,27 @@
 :root {
-  --main-color: #ff69b4; /* Rosa principal */
-  --background-color: #ffffff; /* Branco */
-  --highlight-color: #ff1493; /* Rosa escuro */
-  --text-color: #333333; /* Cinza escuro */
+  --background: rgba(222, 186, 224, 0.856);
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: rgba(222, 186, 224, 0.856);
+  }
 }
 
 html,
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: rgba(222, 186, 224, 0.856);
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -21,21 +31,20 @@ body {
 }
 
 a {
-  color: var(--highlight-color);
+  color: inherit;
   text-decoration: none;
 }
 
-h1 {
-  color: var(--main-color);
+h1{
+  color:#ea8f19 ;
   font-weight: bold;
   text-align: center;
-  margin: 20px 0;
+  font-style: italic;
+
 }
 
-/* Tema escuro */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: #0a0a0a;
-    --text-color: #ededed;
+  html {
+    color-scheme: dark;
   }
 }

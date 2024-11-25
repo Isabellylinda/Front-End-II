@@ -1,30 +1,42 @@
-'use client'
-import { useState } from "react";
+'use client';
 import Link from "next/link";
+import styles from "./header.module.css"
+import { useState } from "react";
 import Image from "next/image";
-import styles from "./Header.module.css";
+
+
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+    const [showMenu, setShowMenu] = useState(true)
+    return (
+        <header>
+            <button onClick={() => setShowMenu(!showMenu)}>
+                <Image className={styles.rat}
+                    src="/menu.png"
+                    alt="Ícone do menu"
+                    width={30}
+                    height={30}
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+                />
+            </button>
+            {
 
-  return (
-    <header className={styles.header}>
-      <Image src="/images/isa.png" alt="Logo Isa" className={styles.logoImage} width={50} height={50} />
-      <div className={styles.menuIcon} onClick={toggleMenu}>
-        <span className={isOpen ? styles.menuOpen : ""}></span>
-      </div>
-      <nav className={`${styles.nav} ${isOpen ? styles.showNav : ""}`}>
-        <ul>
-          <li><Link href="/home">Home</Link></li>
-          <li><Link href="/sobre">Sobre</Link></li>
-          <li><Link href="/contato">Contato</Link></li>
-        </ul>
-      </nav>
-    </header>
-  );
-}
+                showMenu &&
 
+                <nav>
+                    <ul className={styles.li}>
+                        <img className={styles.me}
+                            src="/BD2.png"
+                            alt="menu"
+                            width={75}
+                            height={40}
+                        />
+                        <li><Link href='/'>Home</Link></li>
+                        <li><Link href='/sobre'>Sobre</Link></li>
+                        <li><Link href='/contato'>Contato</Link></li>
+                    </ul>
+                </nav>
+            }
+        </header>
+    )
+} 

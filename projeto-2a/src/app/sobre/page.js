@@ -4,7 +4,7 @@
     export default function sobre(){
     return(
         <main>
-            <h1>Sobre nós</h1>
+            <h1>Sobre eu diva</h1>
         </main>
     )
 }
