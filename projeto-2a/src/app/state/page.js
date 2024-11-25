@@ -1,32 +1,32 @@
-// state/page.js
+"use client";
+
 import { useState } from "react";
 
 export default function State() {
     const [conteudo, setConteudo] = useState("Bom dia");
-    const [name, setName] = useState("");
-    const [showDiv, setShowDiv] = useState(true);
 
-    const controlarParagrafo = () => {
-        setConteudo("Boa tarde!");
-    };
-
-    const controlarInput = (evento) => {
-        setName(evento.target.value);
+    const atualizarConteudo = () => {
+        setConteudo("Boa tarde");
     };
 
     return (
-        <div>
-            <p>{conteudo}</p>
-            <button onClick={controlarParagrafo}>Mudar</button>
-            <button onClick={() => setShowDiv(!showDiv)}>
-                {showDiv ? "Esconder" : "Mostrar"}
+        <div style={{ textAlign: "center", padding: "20px", fontFamily: "Arial, sans-serif" }}>
+            <p style={{ fontSize: "24px", fontWeight: "bold" }}>{conteudo}</p>
+            <button
+                onClick={atualizarConteudo}
+                style={{
+                    padding: "10px 20px",
+                    fontSize: "16px",
+                    border: "none",
+                    borderRadius: "5px",
+                    backgroundColor: "#4CAF50",
+                    color: "white",
+                    cursor: "pointer",
+                    marginTop: "10px",
+                }}
+            >
+                Atualizar
             </button>
-            {showDiv && (
-                <div>
-                    <p>Nome: {name}</p>
-                    <input type="text" onChange={controlarInput} />
-                </div>
-            )}
         </div>
     );
 }
