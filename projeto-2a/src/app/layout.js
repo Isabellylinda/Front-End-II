@@ -6,7 +6,7 @@ export const metadata = {
   title: "Primeira aplicação",
   description: "Aplicação de front-end II",
   charset: 'UTF-8',
-  author: 'Isabelly Lopes',
+  author: 'Ana Isabely',
   keywords: 'HTML, CSS, JavaScript, React, Next.js'
 };
 
