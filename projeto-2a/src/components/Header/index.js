@@ -1,12 +1,13 @@
 'use client';
 import Link from "next/link";
-import styles from "./header.module.css";
+import styles from "./header.module.css"
 import { useState } from "react";
 import Image from "next/image";
 
-export default function Header() {
-    const [showMenu, setShowMenu] = useState(true);
 
+
+export default function Header() {
+    const [showMenu, setShowMenu] = useState(true)
     return (
         <header>
             <button onClick={() => setShowMenu(!showMenu)}>
@@ -15,9 +16,13 @@ export default function Header() {
                     alt="Ícone do menu"
                     width={30}
                     height={30}
+
                 />
             </button>
-            {showMenu && (
+            {
+
+                showMenu &&
+
                 <nav>
                     <ul className={styles.li}>
                         <img className={styles.me}
@@ -31,7 +36,7 @@ export default function Header() {
                         <li><Link href='/contato'>Contato</Link></li>
                     </ul>
                 </nav>
-            )}
+            }
         </header>
-    );
-}
+    )
+} 

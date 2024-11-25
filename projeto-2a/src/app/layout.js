@@ -1,15 +1,12 @@
 
 import "./globals.css";
-import Header from "../components/header/Header";
-
-;
-
+import Header from "@/components/header";
 
 export const metadata = {
   title: "Primeira aplicação",
   description: "Aplicação de front-end II",
   charset: 'UTF-8',
-  author: 'Ana Isabely',
+  author: 'Isabelly',
   keywords: 'HTML, CSS, JavaScript, React, Next.js'
 };
 
