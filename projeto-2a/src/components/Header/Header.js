@@ -8,6 +8,7 @@ import Image from "next/image";
 
 export default function Header() {
     const [showMenu, setShowMenu] = useState(true)
+
     return (
         <header>
             <button onClick={() => setShowMenu(!showMenu)}>
@@ -37,6 +38,7 @@ export default function Header() {
                         <li><Link href='/listas'>Listas</Link></li>
                         <li><Link href='/props'>Props</Link></li>
                         <li><Link href='/filter'>Filter</Link></li>
+                        <li><Link href='/efeitos'>Efeitos</Link></li>
                     </ul>
                 </nav>
             }
