@@ -1,25 +1,78 @@
-.nav {
-    background-color: #f8f8f8;
-    padding: 10px 20px;
-  }
-  
-  .menu {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .menu li {
-    display: inline;
-  }
-  
-  .menu li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  .menu li a:hover {
-    color: #0070f3;
-  }
+.navbar {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0044cc;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  position: relative;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+.menu li:hover {
+  background-color: #002f99;
+  transform: scale(1.1);
+  border-radius: 5px;
+}
+
+/* Configuração do dropdown */
+.dropdown {
+  display: block;
+  position: absolute;
+  background: white;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  top: 100%;
+  white-space: nowrap;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* Exibe o dropdown com animação */
+.menu li:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Ajuste para evitar que o dropdown saia da tela */
+.menu li:last-child .dropdown {
+  right: 0;
+  left: auto;
+}
+
+/* Estilos dos itens do dropdown */
+.dropdown li {
+  padding: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+.dropdown li:hover {
+  background-color: #f0f0f0;
+}

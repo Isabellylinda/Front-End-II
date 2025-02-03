@@ -1,12 +1,12 @@
-export default function Consulta() {
+export default function ConsultaPage() {
   return (
-    <div>
-      <h1>Gerenciamento de Consultas</h1>
+    <div className="page-container">
+      <h1>Agendamentos</h1>
       <ul>
-        <li>📋 Listar Consultas</li>
-        <li>🕒 Agendar Consulta</li>
-        <li>🔄 Reagendar Consulta</li>
-        <li>❌ Cancelar Agendamento</li>
+        <li><a href="/consulta/listar">Listar Consultas</a></li>
+        <li><a href="/consulta/agendar">Agendar Consulta</a></li>
+        <li><a href="/consulta/editar">Editar Agendamento</a></li>
+        <li><a href="/consulta/cancelar">Cancelar</a></li>
       </ul>
     </div>
   );
