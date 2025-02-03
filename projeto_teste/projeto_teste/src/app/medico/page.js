@@ -1,7 +1,3 @@
-export default function Home() {
-    return (
-      <main>
-      <h1>Medico</h1>
-      </main>
-    );
-  }
+export default function Medico() {
+  return <h1>Página de Médicos</h1>;
+}

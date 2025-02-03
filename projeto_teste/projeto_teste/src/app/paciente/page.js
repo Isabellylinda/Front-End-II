@@ -1,7 +1,3 @@
-export default function Home() {
-    return (
-      <main>
-      <h1>Paciente</h1>
-      </main>
-    );
-  }
+export default function Paciente() {
+  return <h1>Página de Pacientes</h1>;
+}

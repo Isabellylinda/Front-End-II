@@ -1,34 +1,25 @@
-.li {
+.nav {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    list-style-type: none;
-    background-color: #042a55;
-    border-radius: 5px;
-    height: 40px;
-    color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
-}
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    background-color: #000000;
-}
-
-.menuButton {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #000000;
-}
-
-.me {
-    border-radius: 5px;
-}
+    gap: 20px;
+  }
+  
+  .menu li {
+    display: inline;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .menu li a:hover {
+    color: #0070f3;
+  }

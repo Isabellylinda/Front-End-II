@@ -1,21 +1,12 @@
-import "./globals.css";
-import Header from "@/components/Header/Header";
-
-export const metadata = {
-  title: "Primeira aplicação",
-  description: "Aplicação de front-end II",
-  charset: 'UTF-8',
-  author: 'Isabelly',
-  keywords: 'HTML, CSS, JavaScript, React, Next.js'
-};
-
+import './globals.css'; // Estilos globais
+import Header from '../components/Header/Header'; // Importa o Header
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-br">
+    <html lang="pt">
       <body>
-        <Header/>
-        {children}
+        <Header />
+        {children} {/* Renderiza cada página */}
       </body>
     </html>
   );

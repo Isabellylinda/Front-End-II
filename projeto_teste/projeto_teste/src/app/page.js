@@ -1,11 +1,10 @@
-/// import Image from "next/image";
-import styles from "./page.module.css";
-import Image from "next/image";
+import styles from './page.module.css';
 
-export default function Home() {
+export default function Page() {
   return (
-    <div>
-    <h1>Hospital Lopes</h1>
+    <div className={styles.title}>
+      <h1>Bem-vindo à Clínica Médica</h1>
+      <p>Escolha uma opção no menu acima.</p>
     </div>
   );
 }
