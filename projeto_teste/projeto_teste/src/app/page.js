@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <div className={styles.title}>
       <h1>Bem-vindo ao Hospital Lopes</h1>
-      <p>Escolha uma opção no menu acima.</p>
+      <p>Sua saúde é nossa prioridade. Atendimento médico de qualidade e acolhedor para você e sua família.</p>
     </div>
   );
 }
