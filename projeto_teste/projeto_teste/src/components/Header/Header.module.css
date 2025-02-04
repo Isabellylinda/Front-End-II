@@ -27,14 +27,14 @@
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Efeito ao passar o mouse */
+
 .menu li:hover {
   background-color: #002f99;
   transform: scale(1.1);
   border-radius: 5px;
 }
 
-/* Configuração do dropdown */
+
 .dropdown {
   display: block;
   position: absolute;
@@ -53,20 +53,19 @@
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 }
 
-/* Exibe o dropdown com animação */
+
 .menu li:hover .dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-/* Ajuste para evitar que o dropdown saia da tela */
 .menu li:last-child .dropdown {
   right: 0;
   left: auto;
 }
 
-/* Estilos dos itens do dropdown */
+
 .dropdown li {
   padding: 10px;
   color: black;
