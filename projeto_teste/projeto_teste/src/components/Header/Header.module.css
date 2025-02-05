@@ -75,3 +75,30 @@
 .dropdown li:hover {
   background-color: #f0f0f0;
 }
+@media screen and (max-width: 900px) {
+  .menu {
+    gap: 10px;
+    font-size: 14px;
+    justify-content: center;
+  }
+  
+  .menu li {
+    padding: 8px 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .menu li {
+    padding: 5px 8px;
+  }
+}
