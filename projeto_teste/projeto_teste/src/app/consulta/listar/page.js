@@ -18,6 +18,7 @@ export default function ListarConsulta() {
       consulta.paciente.toLowerCase().includes(buscaPaciente.toLowerCase()) &&
       consulta.medico.toLowerCase().includes(buscaMedico.toLowerCase())
   );
+  
 
   return (
     <div style={{ padding: "20px" }}>
