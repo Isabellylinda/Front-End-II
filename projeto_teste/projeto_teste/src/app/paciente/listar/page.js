@@ -37,28 +37,30 @@ export default function ListarPaciente() {
           onChange={handleSearch}
         />
       </div>
-      <table border="1" width="100%" style={{ borderCollapse: "collapse", marginTop: "20px" }}>
-        <thead>
-          <tr style={{ backgroundColor: "#ddd" }}>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Telefone</th>
-            <th>Email</th>
-            <th>CPF</th>
-          </tr>
-        </thead>
-        <tbody>
-          {pacientesFiltrados.map((paciente) => (
-            <tr key={paciente.id}>
-              <td>{paciente.id}</td>
-              <td>{paciente.nome}</td>
-              <td>{paciente.telefone}</td>
-              <td>{paciente.email}</td>
-              <td>{paciente.cpf}</td>
+      <div style={{ width: "100%", overflowX: "auto" }}>
+        <table border="1" width="100%" style={{ borderCollapse: "collapse", marginTop: "20px" }}>
+          <thead>
+            <tr style={{ backgroundColor: "#ddd" }}>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Telefone</th>
+              <th>Email</th>
+              <th>CPF</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {pacientesFiltrados.map((paciente) => (
+              <tr key={paciente.id}>
+                <td>{paciente.id}</td>
+                <td>{paciente.nome}</td>
+                <td>{paciente.telefone}</td>
+                <td>{paciente.email}</td>
+                <td>{paciente.cpf}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+            </div>
+      </div>
   );
 }

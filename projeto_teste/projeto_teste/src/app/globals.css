@@ -132,6 +132,7 @@ button:hover {
   table {
     font-size: 0.8rem;
     overflow-x: auto;
+    
   }
 
   table th, table td {

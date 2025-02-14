@@ -40,28 +40,30 @@ export default function ListarConsulta() {
           onChange={(e) => setBuscaMedico(e.target.value)}
         />
       </div>
-      <table border="1" width="100%" style={{ borderCollapse: "collapse", marginTop: "20px" }}>
-        <thead>
-          <tr style={{ backgroundColor: "#ddd" }}>
-            <th>ID</th>
-            <th>Médico</th>
-            <th>Especialidade</th>
-            <th>Paciente</th>
-            <th>Tipo</th>
-          </tr>
-        </thead>
-        <tbody>
-          {consultasFiltradas.map((consulta) => (
-            <tr key={consulta.id}>
-              <td>{consulta.id}</td>
-              <td>{consulta.medico}</td>
-              <td>{consulta.especialidade}</td>
-              <td>{consulta.paciente}</td>
-              <td>{consulta.tipo}</td>
+      <div style={{ width: "100%", overflowX: "auto" }}> 
+        <table border="1" width="100%" style={{ borderCollapse: "collapse", marginTop: "20px" }}>
+          <thead>
+            <tr style={{ backgroundColor: "#ddd" }}>
+              <th>ID</th>
+              <th>Médico</th>
+              <th>Especialidade</th>
+              <th>Paciente</th>
+              <th>Tipo</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {consultasFiltradas.map((consulta) => (
+              <tr key={consulta.id}>
+                <td>{consulta.id}</td>
+                <td>{consulta.medico}</td>
+                <td>{consulta.especialidade}</td>
+                <td>{consulta.paciente}</td>
+                <td>{consulta.tipo}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
